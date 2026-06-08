@@ -1,0 +1,184 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    background: #f9faff;
+    font-family: 'Lato', sans-serif;
+    color: #333;
+  }
+  .navbar {
+    background-color: #000;
+  }
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  .logo-img {
+    width: 50px;
+    height: 50px;
+  }
+  .card:hover {
+    transform: scale(1.02);
+    transition: transform .2s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  }
+  .card-title {
+    font-weight: bold;
+  }
+  footer img {
+    filter: grayscale(100%);
+    transition: filter .3s;
+    width: 24px;
+    margin: 0 8px;
+  }
+  footer img:hover {
+    filter: grayscale(0%);
+  }
+  header {
+    background: url("../img/portada.png") center/cover no-repeat;
+    height: 400px;
+    position: relative;
+  }
+  header .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  header .contenido-header {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+  }
+  .titulo-header {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+  .linea-header {
+    width: 200px;
+    height: 2px;
+    background: #15a4fa;
+    margin: 1rem auto;
+  }
+  .texto-header {
+    font-weight: 300;
+    font-size: 1.1rem;
+    max-width: 600px;
+  }
+  .action-header {
+    margin-top: 1rem;
+    padding: .75rem 1.5rem;
+    border: 2px solid #15a4fa;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+  }
+  .action-header:hover {
+    background: #15a4fa;
+  }
+  .quienes,
+  .portafolio,
+  .contacto {
+    background: #f0f3f5;
+    padding: 60px 0;
+  }
+  .contenedor {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+  }
+  .quienes-titulo,
+  .portafolio-textos h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .quienes-parrafo,
+  .portafolio-textos p {
+    text-align: center;
+    color: #666;
+    font-weight: 400;
+    max-width: 800px;
+    margin: auto;
+  }
+  .contenido-cajas,
+  .galeria {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  .tarjeta {
+    width: calc(33.333% - 20px);
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .tarjeta img {
+    width: 100%;
+  }
+  .tarjeta .contenido-tarjeta {
+    padding: 1rem;
+  }
+  .galeria .fotos {
+    width: calc(33.333% - 20px);
+  }
+  .galeria .fotos img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+    transition: opacity .3s;
+  }
+  .galeria .fotos img:hover {
+    opacity: 0.7;
+  }
+  .contacto .formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    max-width: 500px;
+    margin: auto;
+  }
+  .contacto input,
+  .contacto textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: 'Lato', sans-serif;
+  }
+  .contacto input[type="submit"] {
+    background: #15a4fa;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 5px;
+    transition: background .3s;
+  }
+  .contacto input[type="submit"]:hover {
+    background: #0c7edc;
+  }
+  @media (max-width: 768px) {
+    .tarjeta,
+    .galeria .fotos {
+      width: calc(50% - 20px);
+    }
+  }
+  @media (max-width: 480px) {
+    .tarjeta,
+    .galeria .fotos {
+      width: 100%;
+    }
+    .titulo-header {
+      font-size: 2rem;
+    }
+  }
